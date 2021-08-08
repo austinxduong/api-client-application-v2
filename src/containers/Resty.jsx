@@ -2,6 +2,7 @@
 // import styles from './Resty.css';
 // import { json } from 'msw/lib/types/context';
 import React, { Component } from 'react';
+import { fetchApi } from '../services/fetchRequest';
 import Header from '../components/header/Header';
 import Body from '../components/body/Body';
 
@@ -14,6 +15,38 @@ export default class Resty extends Component {
       display: { 'JSON Data': 'Here are your results' }
 
     }
+
+    handleChange = ({ target }) => {
+      this.setState({ [target.name]: target.value });
+    }
+
+    handleSubmit = (e) => {
+      const { url, method, json } = this.state;
+      const key = `${url}+${method}+${json}`;
+
+      e.preventDefault();
+      this.fetch();
+
+      if(history.filter(item => item.key === key).length > 0 || method === '') return;
+      this.setState(state => ({
+
+        history: [...state.history, {
+          url: state.url,
+          method: state.method,
+          json: state.json,
+          key: `${state.url}+${state.method}+${state.json}}`
+
+        }]
+      }));
+
+      this.setState(state => {
+        localStorage.setItem('history', JSON.stringify(state.history));
+      });
+    };
+
+
+
+
 
     render(){
 
@@ -28,7 +61,10 @@ export default class Resty extends Component {
             <Body
               url={url}
               method={method}
-              json={json} />
+              json={json} 
+              onSubmit={this.handleSubmit}
+              onChange={this.handleChange} />
+
           </div>
         </>
       );
