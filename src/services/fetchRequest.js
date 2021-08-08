@@ -1,11 +1,11 @@
-export const fetchApi = (url, method, body) => {
+export const fetchApi = (url, method, json) => {
   if(method !== 'GET'){
     return fetch(url, {
       method,
       headers: {
         'Content-Type': 'application/json'
       },
-      body
+      json
     })
       .then(res => res.json());
   }

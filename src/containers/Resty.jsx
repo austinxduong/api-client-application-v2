@@ -1,13 +1,15 @@
 /* eslint-disable max-len */
 // import styles from './Resty.css';
+// import { json } from 'msw/lib/types/context';
 import React, { Component } from 'react';
 import Header from '../components/header/Header';
+import Body from '../components/body/Body';
 
 export default class Resty extends Component {
     state = {
       url: '',
       method: '',
-      body: '',
+      json: '',
       history: [],
       display: { 'JSON Data': 'Here are your results' }
 
@@ -15,11 +17,19 @@ export default class Resty extends Component {
 
     render(){
 
+      const { url, method, json } = this.state;
+
       return (
         <>
           {/* passing in our first presentational component, dont forget to also import the file */}
           {/* // we can go ahead and check our local browser, and RESTless should render on the hompeage now */}
           <Header />
+          <div>
+            <Body
+              url={url}
+              method={method}
+              json={json} />
+          </div>
         </>
       );
     }
