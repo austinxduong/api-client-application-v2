@@ -42,7 +42,25 @@ export default class Resty extends Component {
       this.setState(state => {
         localStorage.setItem('history', JSON.stringify(state.history));
       });
-    };
+    }
+
+    handleClick = event => {
+      const { id } = event.target;
+      let result;
+
+      this.state.history.forEach(item => {
+        if(item.key === id) {
+          result = item;
+        }
+      });
+
+      this.setState({
+        url: result.url,
+        method: result.method,
+        json: result.json
+      });
+    }
+
 
 
 
