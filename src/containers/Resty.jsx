@@ -29,3 +29,5 @@ export default class Resty extends Component {
 // now lets connect our "Resty.jsx" container, to our parent component in App.jsx so it renders on the page
 // after we connect, ACP. Then we will create our first Header (aka presentational) component
 // then, we will connect our Header presentational component in this file (our container)
+// ACP once completed
+// Now, we just repeat the same method. Except... we will create buttons next!
