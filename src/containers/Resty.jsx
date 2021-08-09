@@ -3,7 +3,7 @@ import styles from './Resty.css';
 import React, { Component } from 'react';
 import Header from '../components/header/Header';
 import Body from '../components/body/Body';
-import HistoryQueue from '../components/history/historyList';
+import HistoryQueue from '../components/history/HistoryList';
 import { fetchRequest } from '../services/fetchRequest';
 import Display from '../components/display/Display';
 
