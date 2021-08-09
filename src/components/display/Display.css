@@ -1,4 +1,5 @@
 .Display {
     background-color: cornsilk;
     height: 30vw;
+    overflow:auto;
 }
