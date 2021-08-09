@@ -1,4 +1,4 @@
-export const fetchApi = (url, method, json) => {
+export const fetchRequest = (url, method, json) => {
   if(method !== 'GET'){
     return fetch(url, {
       method,

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Header from '../components/header/Header';
 import Body from '../components/body/Body';
 import HistoryQueue from '../components/history/historyList';
-import { fetchApi } from '../services/fetchRequest';
+import { fetchRequest } from '../services/fetchRequest';
 import Display from '../components/display/Display';
 
 export default class Resty extends Component {
@@ -72,7 +72,7 @@ export default class Resty extends Component {
 
       fetch = () => {
         const { url, method, json } = this.state;
-        return fetchApi(url, method, json)
+        return fetchRequest(url, method, json)
           .then(res => this.setState({ display: res }));
     
       }
@@ -80,7 +80,7 @@ export default class Resty extends Component {
 
       render(){
 
-        const { url, method, json, history, display } = this.state;
+        const { url, method, json, display, history } = this.state;
 
         return (
           <>
