@@ -90,7 +90,6 @@ export default class Resty extends Component {
             <Header />
             <section className={styles.Resty}>
               {/* <HistoryQueue history={history} onClick={this.handleClick} /> */}
-      
               <div>
                 <Body
                   url={url}

@@ -1,0 +1,9 @@
+.Body {
+    display: flex;
+    flex-direction: column;
+}
+
+.Body section {
+    display: flex;
+    flex-direction: row;
+}

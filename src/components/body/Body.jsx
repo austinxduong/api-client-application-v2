@@ -2,10 +2,10 @@
 import styles from './Body.css';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Buttons from 'prop-types';
+import Buttons from '../buttons/Buttons';
 
 
-const Body = ({ url, method, json, onSubmit, onChange }) => {
+const Body = ({ url, json, method, onSubmit, onChange }) => {
 
   return (
     <section className={styles.Body}>
