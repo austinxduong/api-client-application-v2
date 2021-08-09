@@ -8,6 +8,7 @@ const HistoryItem = ({ url, method, id }) => {
       <span id={id}>{url}</span>
     </article>
   );
+  
 };
 
 HistoryItem.propTypes = {
