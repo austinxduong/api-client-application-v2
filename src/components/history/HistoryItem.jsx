@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const HistoryItem = ({ url, method, id }) => {
   return (
-    <queue id={id}>
+    <article id={id}>
       <p id={id}>{method}</p>
       <span id={id}>{url}</span>
-    </queue>
+    </article>
   );
 };
 
