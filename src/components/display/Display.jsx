@@ -13,7 +13,7 @@ const Display = ({ display }) => {
   );
 };
 
-Display.PropTypes = {
+Display.propTypes = {
   display: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
 };
 
