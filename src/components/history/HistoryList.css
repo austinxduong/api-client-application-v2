@@ -1,4 +1,7 @@
 .History{
+    background-color: lightsteelblue;
     display: flex;
+    height: 20vw;
     flex-direction: column;
+    overflow:auto;
 }
