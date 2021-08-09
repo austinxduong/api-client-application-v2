@@ -1,10 +1,11 @@
 /* eslint-disable max-len */
-// import styles from './Resty.css';
+import styles from './Resty.css';
 // import { json } from 'msw/lib/types/context';
 import React, { Component } from 'react';
-import { fetchApi } from '../services/fetchRequest';
+// import { fetchApi } from '../services/fetchRequest';
 import Header from '../components/header/Header';
 import Body from '../components/body/Body';
+import HistoryQueue from '../components/history/historyList';
 
 export default class Resty extends Component {
     state = {
@@ -68,22 +69,26 @@ export default class Resty extends Component {
 
     render(){
 
-      const { url, method, json } = this.state;
+      const { url, method, json, history } = this.state;
 
       return (
         <>
           {/* passing in our first presentational component, dont forget to also import the file */}
           {/* // we can go ahead and check our local browser, and RESTless should render on the hompeage now */}
           <Header />
-          <div>
-            <Body
-              url={url}
-              method={method}
-              json={json} 
-              onSubmit={this.handleSubmit}
-              onChange={this.handleChange} />
+          <section className={styles.Resty}>
+            <HistoryQueue history={history} onClick={this.handleClick} />
+      
+            <div>
+              <Body
+                url={url}
+                method={method}
+                json={json} 
+                onSubmit={this.handleSubmit}
+                onChange={this.handleChange} />
 
-          </div>
+            </div>
+          </section>
         </>
       );
     }
