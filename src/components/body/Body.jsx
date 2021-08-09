@@ -10,12 +10,12 @@ const Body = ({ url, method, json, onSubmit, onChange }) => {
   return (
     <section className={styles.Body}>
       <form onSubmit={onSubmit}>
-        <input type="text" name="url" placeholder="PASTE API URL HERE" value={url} onChange={onChange} />
+        <input type="text" name="url" placeholder="URL" value={url} onChange={onChange} />
         <section>
           <Buttons method={method} onChange={onChange} />
           <button>Process</button>
         </section>
-        <jsonBody placeholder=" RAW JSON" name="json" value={json} onChange={onChange}></jsonBody>
+        <textarea placeholder=" RAW JSON" name="json" value={json} onChange={onChange}></textarea>
       </form>
     </section>
   );

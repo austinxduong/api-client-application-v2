@@ -88,8 +88,8 @@ export default class Resty extends Component {
             {/* passing in our first presentational component, dont forget to also import the file */}
             {/* // we can go ahead and check our local browser, and RESTless should render on the hompeage now */}
             <Header />
-            {/* <section className={styles.Resty}>
-              <HistoryQueue history={history} onClick={this.handleClick} />
+            <section className={styles.Resty}>
+              {/* <HistoryQueue history={history} onClick={this.handleClick} /> */}
       
               <div>
                 <Body
@@ -100,7 +100,7 @@ export default class Resty extends Component {
                   onChange={this.handleChange} />
                 <Display display={display} />
               </div>
-            </section> */}
+            </section>
           </>
         );
       }
