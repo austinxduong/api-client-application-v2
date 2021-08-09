@@ -13,7 +13,7 @@ const Body = ({ url, json, method, onSubmit, onChange }) => {
         <input type="text" name="url" placeholder="URL" value={url} onChange={onChange} />
         <section>
           <Buttons method={method} onChange={onChange} />
-          <button>Process</button>
+          <button> Process </button>
         </section>
         <textarea placeholder=" RAW JSON" name="json" value={json} onChange={onChange}></textarea>
       </form>

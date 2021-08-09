@@ -1,9 +1,27 @@
 .Body {
     display: flex;
     flex-direction: column;
+    
 }
 
 .Body section {
     display: flex;
     flex-direction: row;
+}
+
+.Body textarea {
+    width: 98vw;
+    height: 5vw; 
+    margin-top: 3px;
+}
+
+.Body input {
+    margin-bottom: 1em;
+}
+
+.Body button {
+    height: 25px;
+    margin-left: 20px;
+    color: black;
+    background-color: skyblue
 }
