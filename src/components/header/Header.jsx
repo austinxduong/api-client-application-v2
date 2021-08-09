@@ -4,9 +4,9 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <heaader className={styles.mainHeader}>
+    <header className={styles.mainHeader}>
       <h1>RESTless</h1>
-    </heaader>
+    </header>
   );
 };
 
